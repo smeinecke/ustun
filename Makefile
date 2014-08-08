@@ -1,6 +1,7 @@
 GCC = /usr/bin/gcc
 LIBS = -l pthread
 DEBUG = f
+PREFIX = /usr
 BASICOPTIONS = -Wall -O2 -s
 ifeq ($(DEBUG),t)
 	OPTIONS = $(BASICOPTIONS) -g
@@ -51,4 +52,4 @@ clean:
 		rm -f *.o ustun us6tables usctrl
 
 install:
-		/usr/bin/install -t /usr/sbin/ -v $(EXE)
+		install -m 0755 $(EXE) $(PREFIX)/sbin
