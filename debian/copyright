@@ -1,0 +1,8 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ustun
+Source: <https://github.com/rejsmont/UStun/blob/master/COPYING>
+
+Files: *
+Copyright: 2012 Luca Bertoncello <lucabert@lucabert.de>
+           2012 Radoslaw Ejsmont <radoslaw@ejsmont.net>
+License: GPL-2+

@@ -1,0 +1,16 @@
+Source: ustun
+Section: net
+Priority: extra
+Maintainer: Stefan Meinecke <meinecke@greensec.de>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: https://github.com/rejsmont/UStun.git
+#Vcs-Git: git://git.debian.org/collab-maint/ustun.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/ustun.git;a=summary
+
+Package: ustun
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: User space IPv6 tunnel with firewall
+ This is a user-space IPv6 tunnel with ip6tables-compatible user-space
+ firewall that runs on OpenVZ/Virtuozzo guests.

@@ -7,7 +7,7 @@ ifeq ($(DEBUG),t)
 else
 	OPTIONS = $(BASICOPTIONS)
 endif
-INCLUDE = 
+INCLUDE =
 CFLAGS = $(INCLUDE) $(OPTIONS)
 
 OBJS_TUN = ustun.o inout.o common.o filter.o clist.o state.o logger.o ctrl.o
@@ -48,7 +48,7 @@ usctrl:		$(OBJS_CTRL) $(USER_OBJS)
 		@echo ' '
 
 clean:
-		rm *.o ustun us6tables usctrl
+		rm -f *.o ustun us6tables usctrl
 
 install:
-		/usr/bin/install -t /usr/local/sbin/ -v $(EXE)
+		/usr/bin/install -t /usr/sbin/ -v $(EXE)
