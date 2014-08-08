@@ -16,11 +16,14 @@ export DH_VERBOSE=1
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
 
+%:
+	dh $@
+
 #override_dh_auto_build override_dh_auto_install:
 #	@
 
-override_dh_auto_install:
-	$(MAKE) DESTDIR=$$(pwd)/debian/ustun PREFIX=/usr install
+override_dh_auto_clean:
+	dh_auto_clean
 
-%:
-	dh $@
+override_dh_auto_install:
+	$(MAKE) DESTDIR=$(CURDIR)/debian/ustun/usr/sbin PREFIX=/usr install

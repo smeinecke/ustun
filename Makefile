@@ -16,6 +16,8 @@ OBJS_TABLES = us6tables.o common.o filter.o commands.o clist.o state.o logger.o
 OBJS_CTRL = usctrl.o common.o filter.o logger.o state.o clist.o ctrl.o
 EXE = ustun us6tables usctrl
 
+DESTDIR = $(PREFIX)/sbin
+
 # All targets
 all:		$(EXE)
 		@if [ "$(DEBUG)" = "t" ]; then echo 'IMPORTANT: COMPILED WITH DEBUGINFO!!'; fi
@@ -52,4 +54,4 @@ clean:
 		rm -f *.o ustun us6tables usctrl
 
 install:
-		install -m 0755 $(EXE) $(PREFIX)/sbin
+		install -m 0755 $(EXE) $(DESTDIR)/
