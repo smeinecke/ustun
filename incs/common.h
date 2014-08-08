@@ -24,7 +24,7 @@
 #ifndef COMMON_H_
 #define COMMON_H_
 
-#define CURRENTVERSION          "0.3-20110605"
+#define CURRENTVERSION          "0.3,1"
 
 #define DEFAULT_PIDFILE         "/var/run/ustun.pid"
 #define MODE_6TO4               0
