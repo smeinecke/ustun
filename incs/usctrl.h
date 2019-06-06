@@ -24,6 +24,15 @@
 #ifndef USCTRL_H_
 #define USCTRL_H_
 
+
+#ifndef ENUM_ctrlCommand
+enum ctrlCommand
+{
+  NOCMD, GETINFO, SETVERBOSE, QUIT, GETCONNTRACKS, FLUSHCONNTRACKS, DELETECONNTRACK, DESTROY
+};
+#define ENUM_ctrlCommand
+#endif
+
 #ifdef SOURCE_usctrl
 enum ctrlCommand command;
 int param;

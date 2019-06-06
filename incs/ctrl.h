@@ -26,10 +26,13 @@
 
 #define SHM_CTRLID                6667
 
+#ifndef ENUM_ctrlCommand
 enum ctrlCommand
 {
   NOCMD, GETINFO, SETVERBOSE, QUIT, GETCONNTRACKS, FLUSHCONNTRACKS, DELETECONNTRACK, DESTROY
 };
+#define ENUM_ctrlCommand
+#endif
 
 struct ctrlMem
 {
